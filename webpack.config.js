@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://127.0.0.1:8080/',
     'webpack/hot/only-dev-server',
-    './src'
+    './src/app'
   ],
   output: {
     path: path.join(__dirname, 'public'),
@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: {
     modulesDirectories: ['node_modules', 'src'],
-    extensions: ['', '.js']
+    extensions: ['', '.js', '.scss']
   },
   module: {
     loaders: [
@@ -29,6 +29,15 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'raw'
+      },
+      {
+        test: /\.scss$/,
+        loaders: [
+          'style',
+          'css',
+          'autoprefixer?browsers=last 3 version',
+          'sass?outputStyle=expanded'
+        ]
       }
     ]
   },
