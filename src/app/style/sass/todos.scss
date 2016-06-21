@@ -12,6 +12,11 @@
   &-task-completed {
       text-decoration: line-through;
   }
+
+  &-update-input {
+    margin: 0 auto;
+    width: 300px;
+  }
 }
 
 th, td {

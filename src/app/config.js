@@ -16,7 +16,7 @@ app.config(($stateProvider, $urlRouterProvider, $locationProvider) => {
     .state('about', {
       url: '/about',
       template: require('app/views/about.html')
-    })
+    });
 
     $locationProvider.html5Mode(true);
 });
